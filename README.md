@@ -5,8 +5,10 @@ sudo apt install imagemagick
 
 ### Web Application 
 cd autoAPKclient
+npm install
 npm start
 cd autoAPKserver
+npm install
 npm start
 
 ### Android
