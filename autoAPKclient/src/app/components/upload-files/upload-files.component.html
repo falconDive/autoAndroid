@@ -1,0 +1,65 @@
+<div class="card">
+  <h4 class="card-header">Android APK Generator</h4>
+  <div class="card-body">
+      
+          <div class="form-group">
+              <label for="string1">String1</label>
+              <input type="text" formControlName="string1" class="form-control"  required="true" id="string1" name="string1" (change)="selectinput($event.target)"/>
+          </div>
+        
+          <div class="form-group">
+            <label for="string2">String2</label>
+            <input type="text" formControlName="string2" class="form-control"  required="true" id="string2" name="string2" (change)="selectinput($event.target)"/>
+            
+        </div>
+
+        <div class="form-group">
+          <label for="string3">String3</label>
+          <input type="text" formControlName="string3" class="form-control" required="true" id="string3" name="string3" (change)="selectinput($event.target)"/>
+          
+      </div>
+
+      <div class="form-group">
+        <label for="string4">String4</label>
+        <input type="text" formControlName="string4" class="form-control"  required="true" id="string4" name="string4" (change)="selectinput($event.target)"/>
+        
+    </div>
+
+    <div class="form-group">
+      <label for="string5">String5</label>
+      <input type="text" formControlName="string5" class="form-control" required="true" id="string5" name="string5" (change)="selectinput($event.target)"/>
+      
+  </div>
+
+          <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
+            <p style="color: white">Please Wait. </p>  
+            </ngx-spinner>  
+
+
+          <label class="btn btn-default">
+            <input type="file" (change)="selectFile($event)" />
+          </label>
+
+          <button class="btn btn-success" [disabled]="click" (click)="upload()">
+            Generate APK
+          </button>
+          
+          <div class="alert alert-light" role="alert">{{ message }}</div>
+          
+          <div class="card">
+            <div class="card-header">List of Files</div>
+            <ul
+              class="list-group list-group-flush"
+              *ngFor="let file of fileInfos | async"
+            >
+              <li class="list-group-item">
+                <a href="{{ file.url }}">{{ file.name }}</a>
+              </li>
+            </ul>
+          </div>
+          
+
+      
+  </div>
+</div>
+

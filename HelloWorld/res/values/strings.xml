@@ -1,0 +1,9 @@
+<resources>
+   <string name="app_name">A Hello Android</string>
+   <string name="hello_msg">Hello Android!</string>
+   <string name="string1"></string>
+   <string name="string2"></string>
+   <string name="string3"></string>
+   <string name="string4"></string>         
+   <string name="string5"></string>   
+</resources>
